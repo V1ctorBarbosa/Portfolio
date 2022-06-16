@@ -1,5 +1,6 @@
 import Header from "./components/header/header";
 import Home from "./components/home/home";
+import Members from "./components/members/Members"
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
 import Navbar from "./components/nav/nav";
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Navbar />
       <Home />
+      <Members /> 
       <About />
       <Contact />
       <Footer />

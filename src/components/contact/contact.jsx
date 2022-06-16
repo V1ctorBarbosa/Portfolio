@@ -18,7 +18,7 @@ function Contact() {
         >
           <AiFillLinkedin className="icon" />
           <h2>
-            LinkdIn <span>Victor Barbosa</span>
+            LinkedIn <span>Victor Barbosa</span>
           </h2>
         </a>
 
