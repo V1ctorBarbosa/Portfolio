@@ -17,6 +17,9 @@ function Home() {
         </div>
 
         <img src={me} alt='' />
+        <div className='hiden-text'>
+          <p>click!</p>
+        </div>
       </div>
 
       <h2>
