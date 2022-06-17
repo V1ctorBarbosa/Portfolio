@@ -1,8 +1,8 @@
 import "./nav.css";
 import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
+import { VscCode } from "react-icons/vsc";
 import { BiMessageRoundedDots } from "react-icons/bi";
-import { BsArrowDownCircle } from "react-icons/bs";
+import { FaRegFileCode } from "react-icons/fa";
 
 function Navbar() {
   return (
@@ -10,14 +10,14 @@ function Navbar() {
       <a href="#home">
         <AiOutlineHome className="icon active-nav" />
       </a>
+      <a href="#cards">
+        <VscCode className="icon" />
+      </a>
       <a href="#about">
-        <AiOutlineUser className="icon" />
+        <FaRegFileCode className="icon" />
       </a>
       <a href="#contact">
         <BiMessageRoundedDots className="icon" />
-      </a>
-      <a href="#footer">
-        <BsArrowDownCircle className="icon" />
       </a>
     </div>
   );

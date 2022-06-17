@@ -1,9 +1,9 @@
-import "./Members.css";
+import "./cards.css";
 
-const Members = () => {
+const Cards = () => {
   return (
 
-    <div>
+    <div id="cards">
 
       <div>
         <h1 className="card-txt">Tecnologies I use</h1>
@@ -26,7 +26,7 @@ const Members = () => {
         <div className="card card-3">
           <div className="card-img"></div>
           <div className="card-info">
-            <h1 className="name">JavaScript</h1>
+            <h1 className="name">ES6+</h1>
           </div>
         </div>
       </div>
@@ -34,4 +34,4 @@ const Members = () => {
   );
 };
 
-export default Members;
+export default Cards;

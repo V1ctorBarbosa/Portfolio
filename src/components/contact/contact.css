@@ -11,10 +11,13 @@
 
 .contact-container h1 {
   margin: 0 auto;
-  font-size: 22px;
-  font-family: 'Open Sans Condensed';
-  font-weight: 400;
+  font-size: 25px;
+  border-bottom: 2px solid var(--color-sec);
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
   color: var(--color-sec);
+  opacity: 0.8;
+  padding-bottom: 5px;
 }
 
 .contact-container .contact-links {
@@ -82,66 +85,19 @@
   .contact-container .contact-links {
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: 40px;
   }
 
   .contact-container .contact {
-    position: inherit;
-    height: 400px;
     width: 80%;
     margin: 25px;
     backdrop-filter: blur(20px);
   }
-
-  .contact-container .contact h2 span {
-    font-size: 25px;
-  }
 }
 
 @media (max-width: 500px) {
-
-
   
-  .contact-container .contact-links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: 30px;
-  }
-
   .contact-container .contact {
-    position: inherit;
-    height: 280px;
     width: 95%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 25px;
-    backdrop-filter: blur(20px);
-    transition: 0.3s ease, transform 0.2s ease;
-  }
-  .contact-container .contact .icon {
-    position: relative;
-    font-size: 130px;
-  }
-
-  .contact-container .contact h2 {
-    position: relative;
-    margin-top: 15px;
-    font-size: 21px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    text-transform: capitalize;
-    font-family: 'Open Sans';
-    text-align: center;
   }
 
   .contact-container .contact h2 span {
@@ -151,136 +107,44 @@
 
 @media (max-width: 420px) {
   .contact-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     min-height: 80vh;
     margin-top: 70px;
     padding: 30px;
   }
 
   .contact-container h1 {
-    margin: 0 auto;
     font-size: 25px;
-    font-family: 'Open Sans Condensed';
-    font-weight: 400;
-    color: var(--color-sec);
   }
 
   .contact-container .contact-links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
     margin-top: 30px;
   }
 
-  .contact-container .contact {
-    position: inherit;
-    height: 280px;
-    width: 95%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 25px;
-    backdrop-filter: blur(20px);
-    transition: 0.3s ease, transform 0.2s ease;
-  }
   .contact-container .contact .icon {
-    position: relative;
     font-size: 150px;
   }
 
   .contact-container .contact h2 {
-    position: relative;
-    margin-top: 15px;
-    font-size: 25px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    text-transform: capitalize;
-    font-family: 'Open Sans';
-    text-align: center;
+    font-size: 25px;    
   }
 
   .contact-container .contact h2 span {
     font-size: 15px;
-    font-weight: 100;
-    margin-top: 3px;
-    color: rgb(202, 202, 202);
   }
 }
 
 @media (max-width: 375px) {
   .contact-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 80vh;
     margin-top: 100px;
     padding: 15px;
   }
 
-  .contact-container h1 {
-    margin: 0 auto;
-    font-size: 22px;
-    font-family: 'Open Sans Condensed';
-    font-weight: 400;
-    color: var(--color-sec);
-  }
-
   .contact-container .contact-links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
     margin-top: 20px;
   }
 
   .contact-container .contact {
-    position: inherit;
     height: 290px;
-    width: 95%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    backdrop-filter: blur(20px);
-    transition: 0.3s ease, transform 0.2s ease;
-  }
-  .contact-container .contact .icon {
-    position: relative;
-    font-size: 150px;
   }
 
-  .contact-container .contact h2 {
-    position: relative;
-    margin-top: 15px;
-    font-size: 25px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    text-transform: capitalize;
-    font-family: 'Open Sans';
-    text-align: center;
-  }
-
-  .contact-container .contact h2 span {
-    font-size: 15px;
-    font-weight: 100;
-    margin-top: 3px;
-    color: rgb(202, 202, 202);
-  }
 }

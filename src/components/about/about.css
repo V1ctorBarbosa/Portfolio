@@ -8,6 +8,12 @@
   backdrop-filter: blur(20px);
 }
 
+@media (max-width: 1500px) {
+  .about-container {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 1000px) {
   .about-container {
     padding: 15px;

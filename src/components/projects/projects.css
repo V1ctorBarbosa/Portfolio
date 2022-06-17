@@ -5,15 +5,17 @@
 }
 
 .quali-text{
-    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid var(--color-sec);
-    margin: 2rem auto;
-    padding-bottom: 5px;
+    margin: 0 auto 5rem;
+    width: 170px;        
+    font-size: 25px;
     opacity: 0.8;
-    width: 240px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-sec);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600;
 }
 
 img {
@@ -98,42 +100,6 @@ img {
 
 .project-four:hover {
     transform: scale(.95);
-}
-
-.project-five {
-    margin-top: 50px;
-    flex-direction: row;
-    display: none;
-    background-color: var(--color-sec);
-    border-radius: 30px;
-    padding: 1rem;
-}
-
-.project-six {
-    margin-top: 50px;
-    flex-direction: row;
-    display: none;
-    background-color: var(--color-sec);
-    border-radius: 30px;
-    padding: 1rem;
-}
-
-.project-seven {
-    margin-top: 50px;
-    flex-direction: row;
-    display: none;
-    background-color: var(--color-sec);
-    border-radius: 30px;
-    padding: 1rem;
-}
-
-.project-eigth {
-    margin-top: 50px;
-    flex-direction: row;
-    display: none;
-    background-color: var(--color-sec);
-    border-radius: 30px;
-    padding: 1rem;
 }
 
 @media (max-width: 1400px) {
