@@ -23,10 +23,10 @@ function Home() {
       </div>
 
       <h2>
-        <span>About Me</span> <br />
+        <span>Sobre mim</span> <br />
         <p>
-          I'm from Rio de Janeiro, 23 years old, and work with web applications using React and NodeJS.
-          I'm highly interested in programming, innovation, productivity and organization.
+        Sou do Rio de Janeiro, tenho 23 anos e trabalho com aplicações web utilizando React e NodeJS.
+        Tenho interesse em programação, inovação, produtividade e organização.
         </p>
       </h2>
 

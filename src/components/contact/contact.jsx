@@ -9,7 +9,7 @@ import {
 function Contact() {
   return (
     <div id="contact" className="container contact-container">
-      <h1>Contact Me</h1>
+      <h1>Fale Comigo!</h1>
       <div className="contact-links">
         <a
           href="https://www.linkedin.com/in/victorfbarbosa/"

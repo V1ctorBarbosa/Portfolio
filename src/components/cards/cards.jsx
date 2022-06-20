@@ -6,7 +6,7 @@ const Cards = () => {
     <div id="cards">
 
       <div>
-        <h1 className="card-txt">Tecnologies I use</h1>
+        <h1 className="card-txt">Tecnologias</h1>
       </div>
 
       <div className="container card-container">

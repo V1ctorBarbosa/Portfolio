@@ -8,10 +8,10 @@ function Footer() {
   return (
     <div id="footer" className="container footer-container">
       <h1>
-        Thanks for being here ^^ {" "}
+        Obrigado por estar aqui ^^ {" "}
         <a href="#home">
           <h2>
-            <BsMouse /> - scroll up -
+            <BsMouse /> - subir -
           </h2>
         </a>
       </h1>

@@ -8,7 +8,7 @@ function Buttons() {
         Download CV.
       </a>
       <a href="#contact" className="btn sec">
-        Get in Touch
+        Fale comigo!
       </a>
     </div>
   );

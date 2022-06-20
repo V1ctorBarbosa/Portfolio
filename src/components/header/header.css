@@ -33,11 +33,6 @@
   font-size: 15px;
 }
 
-.header-container h3 p span {
-  color: var(--color-sec);
-  font-size: 20px;
-}
-
 .header-container h2 {
   font-size: 16px;
   font-weight: 100;
