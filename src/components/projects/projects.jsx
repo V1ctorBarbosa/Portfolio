@@ -65,7 +65,6 @@ const Qualifications = () => {
         </div>
       </div>
       
-
     </div>
   );
 };
