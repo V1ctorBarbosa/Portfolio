@@ -34,15 +34,15 @@
   }
 
   .card-1 .card-img {  
-    background: url("../../../public/assets/node.png");
+    background: url("../../assets/node.png");
   }
 
   .card-2 .card-img {  
-    background: url("../../../public/assets/react.png");
+    background: url("../../assets/react.png");
   }
 
   .card-3 .card-img {  
-    background: url("../../../public/assets/js.png");
+    background: url("../../assets/js.png");
   }
 
   .card-container .card .card-img {
