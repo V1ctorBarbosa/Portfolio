@@ -1,14 +1,14 @@
 //React
 import React from "react";
 
-//Components
-import Header from "./components/header/header";
-import Navbar from "./components/nav/nav";
-import Home from "./components/home/home";
-import Cards from "./components/cards/cards";
-import About from "./components/about/about";
-import Contact from "./components/contact/contact";
-import Footer from "./components/footer/footer";
+//sections
+import Header from "./sections/header/header";
+import Navbar from "./sections/nav/nav";
+import Home from "./sections/home/home";
+import Cards from "./sections/cards/cards";
+import About from "./sections/about/about";
+import Contact from "./sections/contact/contact";
+import Footer from "./sections/footer/footer";
 
 const Main: React.FC = (): JSX.Element => {
   return (

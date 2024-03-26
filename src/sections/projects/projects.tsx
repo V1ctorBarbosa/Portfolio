@@ -1,4 +1,5 @@
 //Styles
+import { Container } from "./projects.styles";
 import "./projects.css";
 
 //Data
@@ -7,7 +8,7 @@ import { projectsData } from "./data";
 //Types
 import { IProjects } from "./projects.types";
 
-export const Projects = () => {
+const Projects = () => {
 
 const renderProjects = () =>
   projectsData.map((project: IProjects) => (
@@ -24,11 +25,13 @@ const renderProjects = () =>
   ));
 
   return (
-    <div className="container-project">
+    <Container>
       <div>
         <span className="quali-text">Projetos</span>
       </div>
       {renderProjects()}
-    </div>
+    </Container>
   );
 };
+
+export default Projects;
