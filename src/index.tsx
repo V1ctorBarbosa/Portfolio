@@ -1,15 +1,17 @@
 import ReactDOM from 'react-dom';
-import './style.css';
-import App from './app';
+import { App } from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
 const toggle = document.querySelector('.hover-show');
 
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('active');
-});
-
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+  });
+}
 let Icons = document.querySelectorAll('.navigation .icon');
 
 Icons.forEach((icon) => {
