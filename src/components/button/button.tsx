@@ -1,5 +1,5 @@
-import "./button.css"
-import curr from "../../assets/curriculoVictorBarbosa.pdf"
+import "./button.css";
+import curr from "../../assets/curriculoVictorBarbosa.pdf";
 
 function Buttons() {
   return (
