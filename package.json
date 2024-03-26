@@ -1,4 +1,5 @@
-{ "homepage": "https://V1ctorBarbosa.github.io/Portfolio",
+{
+  "homepage": "https://V1ctorBarbosa.github.io/Portfolio",
   "name": "portifolio",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
+    "typescript": "^5.4.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -45,6 +47,12 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "gh-pages": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
