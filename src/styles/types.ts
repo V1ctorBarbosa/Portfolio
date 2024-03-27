@@ -12,7 +12,7 @@ export interface IFontStyle {
     medium?: string;
     semiBold?: string;
     bold?: string;
-    small?: string;
+    thin?: string;
 }
 
 export interface IUnderlineStyle {

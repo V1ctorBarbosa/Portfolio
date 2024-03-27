@@ -1,6 +1,10 @@
 //Styles
-import { Container } from "./projects.styles";
+import { Container, Header, ProjectSection, ProjectImg } from "./projects.styles";
+import { colors } from "../../styles/colors";
 import "./projects.css";
+
+//Components
+import Text from "../../components/Text/text";
 
 //Data
 import { projectsData } from "./data";
@@ -10,25 +14,29 @@ import { IProjects } from "./projects.types";
 
 const Projects = () => {
 
-const renderProjects = () =>
+  const renderProjects = () =>
   projectsData.map((project: IProjects) => (
-    <div className="project" key={project.link}>
+    <ProjectSection key={project.link}>
       <div className="project-image">
         <a href={project.link} target="_blank" rel="noopener noreferrer">
-          <img src={project.image} alt="" />
+          <ProjectImg src={project.image} alt="" />
         </a>
       </div>
       <div className="project-content">
-        <p>{project.description}</p>
+        <Text type="c1" align="center" weight="thin" color={colors.main}>
+          {project.description}
+        </Text>
       </div>
-    </div>
+    </ProjectSection>
   ));
 
   return (
     <Container>
-      <div>
-        <span className="quali-text">Projetos</span>
-      </div>
+      <Header>
+        <Text type="h3" weight="thin" align="center" decoration="underline" color={colors.secondary}>
+          Projetos
+        </Text>
+      </Header>
       {renderProjects()}
     </Container>
   );

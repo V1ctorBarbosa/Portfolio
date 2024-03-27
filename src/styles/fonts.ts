@@ -2,7 +2,7 @@
 import { IFontStyle, IUnderlineStyle } from "./types";
 
 export const fontWeight: IFontStyle = {
-  small: "400",
+  thin: "400",
   medium: "500",
   semiBold: "600",
   bold: "700",
@@ -14,16 +14,21 @@ export const underLine: IUnderlineStyle = {
 
 export const fonts = {
   h1: {
-    fontSize: "36px",
+    fontSize: "48px",
     ...fontWeight,
     ...underLine
   },
   h2: {
-    fontSize: "28px",
+    fontSize: "36px",
     ...fontWeight,
     ...underLine
   },
   h3: {
+    fontSize: "28px",
+    ...fontWeight,
+    ...underLine
+  },
+  h4: {
     fontSize: "22px",
     ...fontWeight,
     ...underLine
