@@ -4,4 +4,6 @@ export interface IText {
     color?: string,
     size?: string, 
     align?: 'left' | 'center' | 'right'
+    weight?: 'small' | 'medium' | 'semibold' | 'bold'
+    decoration?: 'underline' | 'none' | null
 }
