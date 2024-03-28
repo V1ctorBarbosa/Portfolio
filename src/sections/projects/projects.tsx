@@ -20,12 +20,17 @@ import { projectsData } from "./data/data";
 
 //Types
 import { IProjects } from "./projects.types";
+import { MotionProps } from 'framer-motion'
 
 const Projects = () => {
 
+  const hoverAnimation: MotionProps = {
+    whileHover: { scale: 1.05, transition: { duration: 0.4 } } 
+  };
+
   const renderProjects = () =>
     projectsData.map((project: IProjects) => (
-      <ProjectSection key={project.appLink} href={project.appLink} target="_blank">
+      <ProjectSection key={project.appLink} href={project.appLink} target="_blank" {...hoverAnimation}>
         <ProjectIcon>
           <HoverIcon
             defaultIcon={project.icon}

@@ -3,6 +3,9 @@ import styled from "styled-components";
 //Styles
 import { colors } from "../../styles/colors";
 
+//Animation
+import { motion } from "framer-motion";
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,7 +16,7 @@ export const Header = styled.header`
   padding-block: 5px;
 `;
 
-export const ProjectSection = styled.a`
+export const ProjectSection = styled(motion.a)`
   display: flex;
   align-self: center;
   justify-content: center;
