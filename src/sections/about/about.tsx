@@ -1,11 +1,12 @@
 import "./about.css";
 import Projects from "../projects/projects";
+import { Container } from "./about.styles";
 
 function About() {
   return (
-    <div id="about" className="container about-container">
+    <Container>
       <Projects />
-    </div>
+    </Container>
   );
 }
 export default About;
