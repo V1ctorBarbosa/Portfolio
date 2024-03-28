@@ -1,6 +1,6 @@
 export interface IProjects {
     title: string;
-    image: JSX.Element;
+    icon: JSX.Element;
     description: string;
     link: string;
 }

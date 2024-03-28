@@ -23,6 +23,7 @@ export const ProjectSection = styled.a`
   align-self: center;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 
   border-radius: 20px;
   padding: 20px;
