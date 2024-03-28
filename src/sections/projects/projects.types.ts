@@ -1,6 +1,6 @@
 export interface IProjects {
-    display: 'row' | 'row-reverse'
-    image: string;
+    title: string;
+    image: JSX.Element;
     description: string;
     link: string;
 }
