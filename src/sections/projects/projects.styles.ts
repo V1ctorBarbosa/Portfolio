@@ -1,12 +1,7 @@
 import styled from "styled-components";
-import { FaBowlFood } from "react-icons/fa6";
 
 //Styles
 import { colors } from "../../styles/colors";
-
-export const Icon = styled(FaBowlFood)`
-    color: green;
-`
 
 export const Container = styled.div`
     display: flex;
