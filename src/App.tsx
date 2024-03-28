@@ -1,7 +1,7 @@
 //React
 import React from "react";
 
-//sections
+//Sections
 import Header from "./sections/header/header";
 import Navbar from "./sections/nav/nav";
 import Home from "./sections/home/home";

@@ -1,5 +1,7 @@
-import "./about.css";
+//Components
 import Projects from "../projects/projects";
+
+//Styles
 import { Container } from "./about.styles";
 
 function About() {
