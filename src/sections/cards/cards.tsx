@@ -24,7 +24,7 @@ import { cardsData } from "./data/data";
 const Cards = () => {
 
   const hoverAnimation: MotionProps = {
-    whileHover: { y: -10, transition: { duration: 0.4 } } 
+    whileHover: { y: -10, transition: { duration: 0.4 }} 
   };
 
   const handleCards = (cardsData: ICardsData[]) =>
