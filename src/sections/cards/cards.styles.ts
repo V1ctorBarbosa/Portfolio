@@ -20,8 +20,17 @@ export const CardContainer = styled.div`
     gap: 30px; 
     justify-content: center; 
     align-items: center; 
-`
 
+    @media (max-width: 1130px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 820px){
+        display: flex;
+        flex-direction: column;
+        align-items: unset; 
+    }
+`
 
 export const CardSection = styled(motion.div)`
     display: flex;
@@ -32,6 +41,8 @@ export const CardSection = styled(motion.div)`
     padding: 10px;
     border: 1px solid;
     border-radius: 20px;
+
+    cursor: pointer;
 `
 
 export const CardImg = styled.img`

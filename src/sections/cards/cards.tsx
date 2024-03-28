@@ -16,18 +16,23 @@ import { colors } from "../../styles/colors";
 
 //Types
 import { ICardsData } from "./cards.types";
+import { MotionProps } from 'framer-motion'
 
 //Data
 import { cardsData } from "./data/data";
 
 const Cards = () => {
-  
+
+  const hoverAnimation: MotionProps = {
+    whileHover: { y: -10, transition: { duration: 0.4 } } 
+  };
+
   const handleCards = (cardsData: ICardsData[]) =>
     cardsData.map((cardData: ICardsData) => (
-      <CardSection>
+      <CardSection {...hoverAnimation}>
         <CardImg src={cardData.image} alt={cardData.name} />
         <CardText>
-          <Text type="h2">{cardData.name}</Text>
+          <Text type="h2" weight="thin">{cardData.name}</Text>
         </CardText>
       </CardSection>
     ));
