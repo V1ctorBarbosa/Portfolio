@@ -1,5 +1,3 @@
-import "./footer.css";
-
 //Components
 import Text from "../../components/Text/text";
 
