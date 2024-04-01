@@ -19,6 +19,10 @@ export const Header = styled.header`
 export const ContactsSection = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContactCard = styled(motion.a)`
