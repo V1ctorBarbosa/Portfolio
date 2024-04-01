@@ -1,5 +1,3 @@
-import "./cards.css";
-
 //Components
 import Text from "../../components/Text/text";
 

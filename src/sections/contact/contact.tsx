@@ -1,41 +1,52 @@
-import "./contact.css";
-import { 
-  AiFillLinkedin,
-  AiOutlineWhatsApp,
-  AiOutlineMail,
- } from "react-icons/ai";
+//Styles
+import { colors } from "../../styles/colors";
+import { ContactCard, Container, ContactsSection } from "./contact.styles";
 
 //Data
 import { contactsData } from "./data/data";
 
- //Types
+//Types
 import { IContacsData } from "./contact.types";
+import { MotionProps } from "framer-motion";
 
+//Components
+import Text from "../../components/Text/text";
 
 function Contact() {
+  const hoverAnimation: MotionProps = {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.4 },
+      backgroundColor: "rgba(255, 255, 255, 0.096)",
+    },
+  };
 
-  const handleContacts = (contacts: IContacsData[]) => {
-    contacts.map((contact: IContacsData) => {
-      <a
-      href="https://www.linkedin.com/in/victorfbarbosa/"
-      className="contact linkdin"
-      target={"blank"}
-    >
-      <AiFillLinkedin className="icon" />
-      <h2>
-        LinkedIn <span>Victor Barbosa</span>
-      </h2>
-    </a>
-    })
-  }
+  const handleContacts = (contacts: IContacsData[]) =>
+    contacts.map((contact: IContacsData) => (
+      <ContactCard href={contact.link} target={"blank"} {...hoverAnimation}>
+        {contact.icon}
+        <Text type="h4" weight="thin">
+          {contact.socialName}
+        </Text>
+        <Text type="c1" weight="thin" color={colors.secondaryLight}>
+          {contact.name}
+        </Text>
+      </ContactCard>
+    ));
 
   return (
-    <div id="contact" className="container contact-container">
-      <h1>Fale Comigo!</h1>
-      <div className="contact-links">
-      {handleContacts(contactsData)}
-      </div>
-    </div>
+    <Container>
+      <Text
+        type="h3"
+        weight="thin"
+        align="center"
+        decoration="underline"
+        color={colors.secondary}
+      >
+        Fale Comigo!
+      </Text>
+      <ContactsSection>{handleContacts(contactsData)}</ContactsSection>
+    </Container>
   );
 }
 
