@@ -3,39 +3,33 @@ import styled from "styled-components";
 //Styles
 import { colors } from "../../styles/colors";
 
+//Animation
+import { motion } from "framer-motion";
+
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-    margin: 0 auto;
-    width: 75%;
-`
+  margin: 0 auto;
+  width: 75%;
+`;
 
-export const Header = styled.header``
+export const Header = styled.header``;
 
 export const Main = styled.main`
-    width: 100%;
-`
+  width: 100%;
+`;
 
-export const ProfileImg = styled.img`
-    width: 50%;
-    display: flex;
+export const ProfileImg = styled(motion.img)`
+  width: 40%;
+  display: flex;
 
-    border: 1px solid ${colors.secondary};
-    border-radius: 100%;
-    margin: auto;
-`
+  border: 1px solid ${colors.secondary};
+  border-radius: 100%;
+  margin: auto;
+`;
 
-export const FloatingIconsSection = styled.div`
-    width: 50%;
-    height: 50%;
+export const FloatingIconsSection = styled(motion.div)``;
 
-    padding: 50px;
-    border-radius: 100%;
-
-    margin: auto;
-    position: relative;
-`
-
-export const Section = styled.section``
-
+export const Section = styled.section``;

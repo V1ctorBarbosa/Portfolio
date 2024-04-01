@@ -4,10 +4,14 @@ import { ICardsData } from "../cards.types"
 //Assets
 import Node from '../../../assets/node.png'
 import React from '../../../assets/react.png'
+import Redux from '../../../assets/redux.svg'
+import Firebase from '../../../assets/firebase.svg'
+import Mongo from '../../../assets/mongodb.svg'
+import Typescript from '../../../assets/typescript.svg'
 
 export const cardsData: ICardsData[] = [
     {
-        image: '',
+        image: Typescript,
         name: 'Typescript'
     },
     {
@@ -15,15 +19,15 @@ export const cardsData: ICardsData[] = [
         name: 'React'
     },
     {
-        image: 'Redux',
+        image: Redux,
         name: 'Redux'
     },
     {
-        image: 'MongoDB',
+        image: Mongo,
         name: 'MongoDB'
     },
     {
-        image: 'Firebase',
+        image: Firebase,
         name: 'Firebase'
     },
     {

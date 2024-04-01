@@ -15,43 +15,50 @@ import {
 //Components
 import FloatingIcon from "./components/FloatingIcon/floatingIcon";
 import Text from "../../components/Text/text";
-
-import me from "../../assets/me5.png";
 import Buttons from "../button/button";
+
+//Assets
+import me from "../../assets/me5.png";
 
 function Home() {
   const [floatingIcons, setFloatingIcons] = useState(false);
+
+  const calculateHorizontalPosition = (index: number) => {
+    const distanceBetweenIcons = 500;
+    return `${index * distanceBetweenIcons}px`;
+  };
 
   const handleFloatingIcons = (floatingIcons: boolean) => {
     if (floatingIcons) {
       return (
         <FloatingIconsSection>
-          <FloatingIcon />
-          <ProfileImg
-          src={me}
-          alt="eu"
-          onClick={() => setFloatingIcons(!floatingIcons)}
-        />
+          <FloatingIcon content={'cachorro'}/>
         </FloatingIconsSection>
       );
-    } else {
-      return (
-        <FloatingIconsSection>
-          <ProfileImg
-          src={me}
-          alt="eu"
-          onClick={() => setFloatingIcons(!floatingIcons)}
-        />
-        </FloatingIconsSection>
-      )
-    };
+    } else return;
   };
 
   return (
     <Container>
       <Main>
-        {handleFloatingIcons(floatingIcons)}
-
+        <ProfileImg
+          src={me}
+          alt="Victor"
+          onClick={() => setFloatingIcons(!floatingIcons)}
+        />
+                <FloatingIconsSection>
+          {floatingIcons && (
+            <>
+              {[0, 1, 2, 3].map((index) => (
+                <FloatingIcon
+                  key={index}
+                  top="-50px" // Define a mesma posição vertical para todos os ícones
+                  left={calculateHorizontalPosition(index)} // Calcula a posição lateral baseada no índice
+                />
+              ))}
+            </>
+          )}
+        </FloatingIconsSection>
       </Main>
       <Section>
         <Text type="h3" weight="thin" align="center" decoration="underline">
