@@ -8,5 +8,5 @@ export const colors: IColors = {
     secondary: '#FBDFDB',
     secondaryLight: '#FBDFDB90',
     darkShade: "#00000020",
-    whiteShade: "rgba(255, 255, 255, 0.096)"
+    whiteShade: "#ffffff20"
 }

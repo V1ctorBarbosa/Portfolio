@@ -11,5 +11,5 @@ export const TextContainer = styled.p<IText>`
     text-decoration: ${({ decoration }) => decoration || 'none'};
     font-size: ${({ type }) => handleSize(type)};
     font-weight: ${({ weight }) => handleFontWeight(weight) || 'normal'};
-    text-align: ${({ align }) => handleTextAlign(align) || 'left'};
+    text-align: ${({ align }) => handleTextAlign(align) || 'center'};
 `;
