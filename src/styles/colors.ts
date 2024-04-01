@@ -6,5 +6,7 @@ export const colors: IColors = {
     primary: '#F4867B',
     primaryLight: '#F4867B90',
     secondary: '#FBDFDB',
-    secondaryLight: '#FBDFDB90'
+    secondaryLight: '#FBDFDB90',
+    darkShade: "#00000020",
+    whiteShade: "rgba(255, 255, 255, 0.096)"
 }

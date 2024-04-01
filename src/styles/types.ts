@@ -4,6 +4,8 @@ export interface IColors {
     primaryLight: string,
     secondary: string,
     secondaryLight: string,
+    darkShade: string,
+    whiteShade: string
 }
 
 export interface IFontStyle {

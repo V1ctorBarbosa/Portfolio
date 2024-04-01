@@ -17,7 +17,7 @@ function Contact() {
     whileHover: {
       scale: 1.05,
       transition: { duration: 0.4 },
-      backgroundColor: "rgba(255, 255, 255, 0.096)",
+      backgroundColor: colors.whiteShade,
     },
   };
 
