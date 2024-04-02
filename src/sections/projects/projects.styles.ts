@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 `;
 
 export const Header = styled.header`

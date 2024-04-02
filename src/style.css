@@ -34,26 +34,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  height: 200px;
-  width: 200px;
-  background: var(--color-pri);
-  filter: blur(140px);
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  top: 200px;
-  left: 250px;
-  height: 200px;
-  width: 200px;
-  background: var(--color-sec);
-  filter: blur(140px);
-}
-
 .bg-circle1 {
   position: fixed;
   top: 0px;
@@ -75,7 +55,7 @@ body::after {
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0
 }
 
 .container {

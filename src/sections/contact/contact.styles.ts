@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 
   width: 75%;
   margin: 0 auto;
