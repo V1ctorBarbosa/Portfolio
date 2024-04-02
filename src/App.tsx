@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Header from "./sections/header/header";
 import Navbar from "./sections/nav/nav";
 import Home from "./sections/home/home";
+import Experience from "./sections/experience/experience";
 import Cards from "./sections/cards/cards";
 import About from "./sections/about/about";
 import Contact from "./sections/contact/contact";
@@ -28,6 +29,7 @@ const Main: React.FC = (): JSX.Element => {
       <Header />
       <Navbar />
       <Home />
+      <Experience />
       <Cards />
       <About />
       <Contact />

@@ -4,10 +4,10 @@ import { ICardsData } from "../cards.types"
 //Assets
 import Node from '../../../assets/node.png'
 import React from '../../../assets/react.png'
-import Redux from '../../../assets/redux.svg'
-import Firebase from '../../../assets/firebase.svg'
-import Mongo from '../../../assets/mongodb.svg'
-import Typescript from '../../../assets/typescript.svg'
+import Redux from '../../../assets/redux.png'
+import Firebase from '../../../assets/firebase.png'
+import Mongo from '../../../assets/mongo.png'
+import Typescript from '../../../assets/typescript.png'
 
 export const cardsData: ICardsData[] = [
     {

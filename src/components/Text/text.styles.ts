@@ -12,4 +12,6 @@ export const TextContainer = styled.p<IText>`
     font-size: ${({ type }) => handleSize(type)};
     font-weight: ${({ weight }) => handleFontWeight(weight) || 'normal'};
     text-align: ${({ align }) => handleTextAlign(align) || 'center'};
+
+    word-wrap: break-word; 
 `;
