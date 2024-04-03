@@ -4,36 +4,19 @@ import Text from "../../components/Text/text";
 //Styles
 import {
   SocialMidiaSection,
-  SocialMidiaIcon,
   Container,
   Header,
   ScrollUp,
 } from "./footer.styled";
-import { colors } from "../../styles/colors";
 import { Mouse } from "lucide-react";
 
-//Types
-import { ISocialMidiaData } from "./footer.types";
-import { MotionProps } from "framer-motion";
+//Utils
+import { handleSocialMidia, hoverAnimation } from "./utils";
 
 //Data
 import { socialMidiaData } from "./data/data";
 
 function Footer() {
-
-  const hoverAnimation: MotionProps = {
-    whileHover: {
-      transition: { duration: 0.4 },
-      backgroundColor: colors.darkShade,
-    },
-  };
-
-  const handleSocialMidia = (socialMidias: ISocialMidiaData[]) =>
-    socialMidias.map((socialMidia: ISocialMidiaData) => (
-      <SocialMidiaIcon {...hoverAnimation} href={socialMidia.link} target="__blank">
-        {socialMidia.icon}
-      </SocialMidiaIcon>
-    ));
 
   return (
     <Container>

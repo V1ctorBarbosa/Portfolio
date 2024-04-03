@@ -27,7 +27,7 @@ function About() {
       ref={ref}
       animate={controls}
       initial="hidden"
-      variants={animationVariants}
+      variants={animationVariants as any}
     >
       <Projects />
     </Container>

@@ -1,53 +1,56 @@
+//React
+import { useEffect } from "react";
+
 //Styles
-import { Container, CardContainer, Section } from "./experience.styles";
+import { Container } from "./experience.styles";
 import { colors } from "../../styles/colors";
 
 //Data
 import { dataExperience } from "./data/data";
 
+//Utils
+import { handleExperiences } from "./utils";
+
 //Components
 import Text from "../../components/Text/text";
 
+//Animation
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { onViewAnimation } from "../../styles/animation";
+
 //Types
-import { IDataExperience } from "./experience.types";
-import { MotionProps } from "framer-motion";
+import { IOnViewAnimation } from "../../styles/types";
 
 function Experience() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
-    const hoverAnimation: MotionProps = {
-        whileHover: {
-          scale: 1.05,
-          transition: { duration: 0.4 },
-          backgroundColor: colors.darkShade,
-        },
-      };
+  const animationVariants: IOnViewAnimation = onViewAnimation("20%");
 
-    const handleExperiences = (experiences: IDataExperience[]) =>
-    experiences.map((experience: IDataExperience) => (
-        <CardContainer key={experience.assignments} {...hoverAnimation}>
-            <Section>
-                <Text type='h3'>{experience.companyName}</Text>
-                <Text type='h4' weight="thin">{experience.ocupation}</Text>
-                <Text type='c1' weight="thin">{experience.timePeriod}</Text>
-            </Section>
-            <Section>
-                <Text type='p'>{experience.assignments}</Text>
-            </Section>
-        </CardContainer>
-    ))
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [inView])
 
   return (
-    <Container>
-        <Text
-          type="h3"
-          weight="thin"
-          align="center"
-          decoration="underline"
-          color={colors.secondary}
-        >
-          Experiência
-        </Text>
-        {handleExperiences(dataExperience)}
+    <Container
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={animationVariants as any}
+    >
+      <Text
+        type="h3"
+        weight="thin"
+        align="center"
+        decoration="underline"
+        color={colors.secondary}
+      >
+        Experiência
+      </Text>
+      {handleExperiences(dataExperience)}
     </Container>
   );
 }
