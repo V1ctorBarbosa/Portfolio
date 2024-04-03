@@ -39,6 +39,7 @@ function Experience() {
       ref={ref}
       animate={controls}
       initial="hidden"
+      id='experience'
       variants={animationVariants as any}
     >
       <Text

@@ -4,6 +4,9 @@ import React from "react";
 //Styles
 import styled from "styled-components";
 
+//Context
+import { GlobalProvider } from "./context/context";
+
 //Sections
 import Header from "./sections/header/header";
 import Navbar from "./sections/nav/nav";
@@ -19,7 +22,7 @@ const Container = styled.div`
   flex-direction: column;
 
   gap: 70px;
-`
+`;
 
 const Main: React.FC = (): JSX.Element => {
   return (
@@ -39,5 +42,9 @@ const Main: React.FC = (): JSX.Element => {
 };
 
 export const App: React.FC = (): JSX.Element => {
-  return <Main />;
+  return (
+    <GlobalProvider>
+      <Main />
+    </GlobalProvider>
+  );
 };

@@ -1,24 +1,26 @@
+//React
+import { useContext } from "react";
+
 import "./nav.css";
-import { AiOutlineHome } from "react-icons/ai";
-import { VscCode } from "react-icons/vsc";
-import { BiMessageRoundedDots } from "react-icons/bi";
-import { FaRegFileCode } from "react-icons/fa";
+
+//Utils
+import { handleIcons, handleNightIcon } from "./utils";
+
+//Context
+import { GlobalContext } from "../../context/context";
+
+//Date
+import { navData } from "./data/data";
 
 function Navbar() {
+  const { nightMode, setNightMode } = useContext(GlobalContext)
+
+  const handleNightMode = () => setNightMode(!nightMode)
+
   return (
     <div className="navigation">
-      <a href="#home">
-        <AiOutlineHome className="icon active-nav" />
-      </a>
-      <a href="#techs">
-        <VscCode className="icon" />
-      </a>
-      <a href="#projects">
-        <FaRegFileCode className="icon" />
-      </a>
-      <a href="#contact">
-        <BiMessageRoundedDots className="icon" />
-      </a>
+      {handleIcons(navData)}
+      {handleNightIcon(nightMode, handleNightMode)}
     </div>
   );
 }
