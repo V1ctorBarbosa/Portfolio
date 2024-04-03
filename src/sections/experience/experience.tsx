@@ -26,7 +26,7 @@ function Experience() {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
-  const animationVariants: IOnViewAnimation = onViewAnimation("20%");
+  const animationVariants: IOnViewAnimation = onViewAnimation("5%");
 
     useEffect(() => {
       if (inView) {

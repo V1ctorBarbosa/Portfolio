@@ -16,7 +16,7 @@ function About() {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
-  const animationVariants: IOnViewAnimation = onViewAnimation("20%");
+  const animationVariants: IOnViewAnimation = onViewAnimation("5%");
 
   if (inView) {
     controls.start("visible");
