@@ -7,11 +7,11 @@ import { handleIcons, handleNightIcon } from "./utils";
 //Date
 import { navData } from "./data/data";
 
-function Navbar() {
+function Navbar({theme, handleTheme}: any) {
   return (
     <Container>
       {handleIcons(navData)}
-      {/* {handleNightIcon({nightMode, handleNightMode})} */}
+      {handleNightIcon({theme, handleTheme})}
     </Container>
   );
 }

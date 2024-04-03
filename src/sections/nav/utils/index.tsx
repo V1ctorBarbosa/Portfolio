@@ -7,16 +7,16 @@ import { Sun, Moon } from "lucide-react";
 //Types
 import { INavData, INightIcon } from "../nav.types";
 
-export const handleNightIcon = ({nightMode, handleNightMode}: INightIcon) => {
-  if (nightMode)
+export const handleNightIcon = ({theme, handleTheme}: any) => {
+  if (theme.id == 'dark')
     return (
-      <NightMode nightMode={nightMode} onClick={() => handleNightMode()}>
+      <NightMode onClick={() => handleTheme()}>
         <Sun size={30} />
       </NightMode>
     );
   else
     return (
-      <NightMode nightMode={nightMode} onClick={() => handleNightMode()}>
+      <NightMode onClick={() => handleTheme()}>
         <Moon size={30} />
       </NightMode>
     );

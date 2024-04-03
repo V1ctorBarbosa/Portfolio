@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background: ${colors.main};
+  background: ${props => props.theme.main};
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   animation: move 1s linear infinite forwards;
