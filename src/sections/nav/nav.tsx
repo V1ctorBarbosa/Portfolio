@@ -10,10 +10,10 @@ function Navbar() {
       <a href="#home">
         <AiOutlineHome className="icon active-nav" />
       </a>
-      <a href="#cards">
+      <a href="#techs">
         <VscCode className="icon" />
       </a>
-      <a href="#about">
+      <a href="#projects">
         <FaRegFileCode className="icon" />
       </a>
       <a href="#contact">

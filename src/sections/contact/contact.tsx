@@ -40,6 +40,7 @@ function Contact() {
       ref={ref}
       animate={controls}
       initial="hidden"
+      id='contact'
       variants={animationVariants as any}
     >
       <Text

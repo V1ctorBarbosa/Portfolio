@@ -1,10 +1,10 @@
 //Styles
-import { CardSection, CardImg, CardText } from "../cards.styles";
+import { CardSection, CardImg, CardText } from "../techs.styles";
 
 //Components
 import Text from "../../../components/Text/text";
 //Types
-import { ICardsData } from "../cards.types";
+import { ICardsData } from "../techs.types";
 import { MotionProps } from "framer-motion";
 
 const hoverAnimation: MotionProps = {

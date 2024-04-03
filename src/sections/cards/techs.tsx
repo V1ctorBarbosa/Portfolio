@@ -12,7 +12,7 @@ import {
   Container,
   Header,
   CardContainer
-} from "./cards.styles";
+} from "./techs.styles";
 import { colors } from "../../styles/colors";
 
 //Data
@@ -26,7 +26,7 @@ import { onViewAnimation } from "../../styles/animation";
 //Types
 import { IOnViewAnimation } from "../../styles/types";
 
-const Cards = () => {
+const Techs = () => {
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -44,6 +44,7 @@ const Cards = () => {
       ref={ref}
       animate={controls}
       initial="hidden"
+      id='techs'
       variants={animationVariants as any}
     >
       <Header>
@@ -62,4 +63,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default Techs;

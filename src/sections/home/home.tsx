@@ -1,3 +1,6 @@
+//React
+import { useEffect } from "react";
+
 //Components
 import Text from "../../components/Text/text";
 import Buttons from "../button/button";
@@ -9,9 +12,34 @@ import "./home.css";
 //Assets
 import me from "../../assets/me5.png";
 
+//Animation
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { onViewAnimation } from "../../styles/animation";
+
+//Types
+import { IOnViewAnimation } from "../../styles/types";
+
 function Home() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  const animationVariants: IOnViewAnimation = onViewAnimation("-5%");
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [inView]);
+
   return (
-    <div id="home" className="container home-container">
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={animationVariants as any}
+      className="container home-container"
+    >
       <div className="logo">
         <div className="hover-show">
           <span className="circle"></span>
@@ -26,7 +54,7 @@ function Home() {
 
         <Image src={me} alt="" />
         <HiddenSection>
-          <Text type="p">click!</Text>
+          <Text type="p" weight="thin">click!</Text>
         </HiddenSection>
       </div>
 
@@ -43,7 +71,7 @@ function Home() {
         </Text>
       </Section>
       <Buttons />
-    </div>
+    </motion.div>
   );
 }
 

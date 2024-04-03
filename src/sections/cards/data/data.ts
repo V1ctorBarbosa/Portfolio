@@ -1,5 +1,5 @@
 //Types
-import { ICardsData } from "../cards.types"
+import { ICardsData } from "../techs.types"
 
 //Assets
 import Node from '../../../assets/node.png'

@@ -9,7 +9,7 @@ import Header from "./sections/header/header";
 import Navbar from "./sections/nav/nav";
 import Home from "./sections/home/home";
 import Experience from "./sections/experience/experience";
-import Cards from "./sections/cards/cards";
+import Techs from "./sections/cards/techs";
 import About from "./sections/about/about";
 import Contact from "./sections/contact/contact";
 import Footer from "./sections/footer/footer";
@@ -27,10 +27,10 @@ const Main: React.FC = (): JSX.Element => {
       <div className="bg-circle1"></div>
       <div className="bg-circle2"></div>
       <Header />
-      {/* <Navbar /> */}
+      <Navbar />
       <Home />
       <Experience />
-      <Cards />
+      <Techs />
       <About />
       <Contact />
       <Footer />
