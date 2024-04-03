@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+//Animation
+import { motion } from "framer-motion";
+
+export const Container = styled(motion.div)`
   width: 75%;
   margin: auto;
   backdrop-filter: blur(20px);
