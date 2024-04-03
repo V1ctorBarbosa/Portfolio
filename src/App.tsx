@@ -4,12 +4,13 @@ import React from "react";
 //Styles
 import { Container } from "./GlobalStyles";
 import { colors } from "./styles/colors";
+import { ThemeProvider } from 'styled-components';
 
 //Components
 import BackgroundCircle from "./components/BackgroundCircle/backgroundCircle";
 
-//Context
-import { GlobalProvider } from "./context/context";
+//styles
+import { GlobalStyle } from './GlobalStyles';
 
 //Sections
 import Header from "./sections/header/header";
@@ -38,10 +39,12 @@ const Main: React.FC = (): JSX.Element => {
   );
 };
 
-export const App: React.FC = (): JSX.Element => {
+export const App: React.FC = () => {
+
   return (
-    <GlobalProvider>
-      <Main />
-    </GlobalProvider>
+    <>
+        <GlobalStyle />
+        <Main />
+        </>
   );
 };

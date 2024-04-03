@@ -7,7 +7,7 @@ import { INavData } from '../nav.types';
 export const navData: INavData[] = [
     {   
         id: '#home',
-        icon: <Home size={30} />
+        icon: <Home size={30}/>
     },
     {
         id: '#experience',
