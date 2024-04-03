@@ -1,65 +1,35 @@
-import "./home.css";
-
-//React
-import { useState } from "react";
-
-//Styles
-import {
-  Container,
-  FloatingIconsSection,
-  Main,
-  ProfileImg,
-  Section,
-} from "./home.styles";
-
 //Components
-import FloatingIcon from "./components/FloatingIcon/floatingIcon";
 import Text from "../../components/Text/text";
 import Buttons from "../button/button";
+
+//Styles
+import { Section, Image, HiddenSection } from "./home.styles";
+import "./home.css";
 
 //Assets
 import me from "../../assets/me5.png";
 
 function Home() {
-  const [floatingIcons, setFloatingIcons] = useState(false);
-
-  const calculateHorizontalPosition = (index: number) => {
-    const distanceBetweenIcons = 500;
-    return `${index * distanceBetweenIcons}px`;
-  };
-
-  const handleFloatingIcons = (floatingIcons: boolean) => {
-    if (floatingIcons) {
-      return (
-        <FloatingIconsSection>
-          <FloatingIcon content={'cachorro'}/>
-        </FloatingIconsSection>
-      );
-    } else return;
-  };
-
   return (
-    <Container>
-      <Main>
-        <ProfileImg
-          src={me}
-          alt="Victor"
-          onClick={() => setFloatingIcons(!floatingIcons)}
-        />
-                <FloatingIconsSection>
-          {floatingIcons && (
-            <>
-              {[0, 1, 2, 3].map((index) => (
-                <FloatingIcon
-                  key={index}
-                  top="-50px" // Define a mesma posição vertical para todos os ícones
-                  left={calculateHorizontalPosition(index)} // Calcula a posição lateral baseada no índice
-                />
-              ))}
-            </>
-          )}
-        </FloatingIconsSection>
-      </Main>
+    <div id="home" className="container home-container">
+      <div className="logo">
+        <div className="hover-show">
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
+          <span className="circle"></span>
+        </div>
+
+        <Image src={me} alt="" />
+        <HiddenSection>
+          <Text type="p">click!</Text>
+        </HiddenSection>
+      </div>
+
       <Section>
         <Text type="h3" weight="thin" align="center" decoration="underline">
           Sobre mim
@@ -73,7 +43,7 @@ function Home() {
         </Text>
       </Section>
       <Buttons />
-    </Container>
+    </div>
   );
 }
 
