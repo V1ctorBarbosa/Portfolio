@@ -1,7 +1,8 @@
 //React
 import { useContext } from "react";
 
-import "./nav.css";
+//Styles
+import { Container } from "./nav.styles";
 
 //Utils
 import { handleIcons, handleNightIcon } from "./utils";
@@ -18,10 +19,10 @@ function Navbar() {
   const handleNightMode = () => setNightMode(!nightMode)
 
   return (
-    <div className="navigation">
+    <Container>
       {handleIcons(navData)}
-      {handleNightIcon(nightMode, handleNightMode)}
-    </div>
+      {handleNightIcon({nightMode, handleNightMode})}
+    </Container>
   );
 }
 

@@ -1,9 +1,20 @@
+//React
+import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
+
+//styles
+import { GlobalStyle } from './GlobalStyles';
+
+//App
 import { App } from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+  <React.StrictMode>
+    <GlobalStyle />
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 const toggle = document.querySelector('.hover-show');
 

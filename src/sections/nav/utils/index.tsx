@@ -5,19 +5,19 @@ import { Link, NightMode } from "../nav.styles";
 import { Sun, Moon } from "lucide-react";
 
 //Types
-import { INavData } from "../nav.types";
+import { INavData, INightIcon } from "../nav.types";
 
-export const handleNightIcon = (nightMode: boolean, handleNightMode: any) => {
+export const handleNightIcon = ({nightMode, handleNightMode}: INightIcon) => {
   if (nightMode)
     return (
-      <NightMode onClick={() => handleNightMode()}>
-        <Sun />
+      <NightMode nightMode={nightMode} onClick={() => handleNightMode()}>
+        <Sun size={30} />
       </NightMode>
     );
   else
     return (
-      <NightMode onClick={() => handleNightMode()}>
-        <Moon />
+      <NightMode nightMode={nightMode} onClick={() => handleNightMode()}>
+        <Moon size={30} />
       </NightMode>
     );
 };

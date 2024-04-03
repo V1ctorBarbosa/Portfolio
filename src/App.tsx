@@ -2,7 +2,11 @@
 import React from "react";
 
 //Styles
-import styled from "styled-components";
+import { Container } from "./GlobalStyles";
+import { colors } from "./styles/colors";
+
+//Components
+import BackgroundCircle from "./components/BackgroundCircle/backgroundCircle";
 
 //Context
 import { GlobalProvider } from "./context/context";
@@ -17,18 +21,11 @@ import About from "./sections/about/about";
 import Contact from "./sections/contact/contact";
 import Footer from "./sections/footer/footer";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  gap: 70px;
-`;
-
 const Main: React.FC = (): JSX.Element => {
   return (
     <Container>
-      <div className="bg-circle1"></div>
-      <div className="bg-circle2"></div>
+      <BackgroundCircle top="0px" left="0px" color={colors.secondaryLight}/>
+      <BackgroundCircle bottom="100px" right="250px" color={colors.secondaryLight} />
       <Header />
       <Navbar />
       <Home />
