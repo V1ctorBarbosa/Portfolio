@@ -51,7 +51,7 @@ function Contact(theme: IThemes) {
       >
         Fale Comigo!
       </Text>
-      <ContactsSection>{handleContacts(contactsData)}</ContactsSection>
+      <ContactsSection>{handleContacts(contactsData, theme)}</ContactsSection>
     </Container>
   );
 }

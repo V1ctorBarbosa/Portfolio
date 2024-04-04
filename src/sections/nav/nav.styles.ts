@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 //Animation
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,13 +11,16 @@ export const Container = styled.div`
   gap: 23px;
 
   position: fixed;
-  top: 0;
-  left: 3%;
-  transform: translate(-50%, 70%);
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-100px);
 
-  background-color: ${props => props.theme.secondary};
+  background-color: ${(props) => props.theme.secondary};
   padding: 15px 10px;
   border-radius: 50px;
+
+  opacity: 0;
+  animation: fade-nav-in 1s ease 1 1s forwards;
 
   @media (max-width: 820px) {
     flex-direction: row;
@@ -28,14 +31,28 @@ export const Container = styled.div`
     transform: translate(-50%, 50%);
 
     border-radius: 100px;
+    animation: fade-nav-bottom 1s ease forwards;
   }
 
-  @media (max-width: 380px){
+  @media (max-width: 380px) {
     width: 320px;
     gap: 10px;
   }
-`;
 
+  @keyframes fade-nav-bottom {
+    to {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-nav-in {
+    to {
+      transform: translateY(-50%) translateX(0);
+      opacity: 1;
+    }
+  }
+`;
 export const Link = styled(motion.a)`
   display: flex;
   justify-content: center;
@@ -43,7 +60,7 @@ export const Link = styled(motion.a)`
 
   padding: 5px;
   border-radius: 50%;
-  background-color: ${props => props.theme.primaryLight};
+  background-color: ${(props) => props.theme.primaryLight};
 `;
 
 export const NightMode = styled.div`
@@ -54,5 +71,6 @@ export const NightMode = styled.div`
   padding: 5px;
 
   border-radius: 50%;
-  background-color: ${props => props.theme.id == 'light' ? '#191410' : '#F16D82' };
+  background-color: ${(props) =>
+    props.theme.id == "light" ? "#191410" : "#F16D82"};
 `;

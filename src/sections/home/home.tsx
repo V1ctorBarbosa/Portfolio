@@ -10,7 +10,7 @@ import { Section, Image, HiddenSection } from "./home.styles";
 import "./home.css";
 
 //Assets
-import me from "../../assets/me5.png";
+import me from "../../assets/me.png";
 
 //Animation
 import { useAnimation, motion } from "framer-motion";

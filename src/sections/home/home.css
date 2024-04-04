@@ -75,7 +75,8 @@
     position: absolute;
     transform: translateX(210%);
     background: url(../../assets/js.png);
-    background-size: cover;
+    background-size: 80%;
+    background-repeat: no-repeat;
     background-position: center;
   }
   .home-container .logo .hover-show.active .circle:nth-child(4) {
@@ -132,6 +133,7 @@
     }
   
     .home-container .logo {
+      margin-top: 120px;
       height: 220px;
       width: 220px;
     }
