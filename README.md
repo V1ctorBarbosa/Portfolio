@@ -1,17 +1,18 @@
 # Portfolio
 My personal portfolio made with React
 
-![screencapture-v1ctorbarbosa-github-io-Portfolio-2022-06-20-23_44_53](https://user-images.githubusercontent.com/101783823/174705358-72343e45-1003-4c8b-abd0-0e1bfe3fecc3.png)
+![screencapture-localhost-5173-2024-04-04-10_27_36](https://github.com/V1ctorBarbosa/Portfolio/assets/101783823/d492975d-6f26-43b9-b8a3-e366ab6def3b)
+
 
 ## 🛠️ Built with
 
 * HTML5
 * CSS3
-* Javascript
+* Typescript
 * React
-* Hooks
-* Props
-* JSX
+* Styled-components
+* Framer-motion
+* Vite
 
 ### 📋 Prerequisites
 
@@ -27,19 +28,19 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 
 Installation:
 
-`npm install`  
+`yarn`  
 
 To Run Test Suite:  
 
-`npm test`  
+`yarn test`  
 
 To Start Server:
 
-`npm start`  
+`yarn start`  
 
 To Visit App:
 
-`localhost:3000/ideas`
+`localhost:3000/`
 
 ---
 Made with ❤️ by [Victor](https://github.com/V1ctorBarbosa) 🐶
