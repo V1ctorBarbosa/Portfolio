@@ -1,0 +1,185 @@
+.home-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  
+  .home-container .logo {
+    position: inherit;
+    margin-top: -50px;
+    height: 520px;
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    user-select: none;
+  }
+  
+  .home-container .logo .hover-show {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    cursor: pointer;
+  }
+  
+  .home-container .logo .hover-show.active {
+    animation: showspin 8s linear 1s infinite;
+  }
+  
+  @keyframes showspin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .home-container .logo .circle {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+    opacity: 0;
+  }
+  
+  .home-container .logo .hover-show.active .circle {
+    opacity: 1;
+  }
+  
+  .home-container .logo .hover-show.active .circle:nth-child(1) {
+    background: url(../../assets/html5.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transform: translateY(-210%);
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(2) {
+    position: absolute;
+    transform: translateX(150%) translateY(-150%);
+    background: url(../../assets/css3.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(3) {
+    position: absolute;
+    transform: translateX(210%);
+    background: url(../../assets/js.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(4) {
+    position: absolute;
+    transform: translateX(150%) translateY(150%);
+    background: url(../../assets/typescript.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(5) {
+    position: absolute;
+    transform: translateY(210%);
+    background: url(../../assets/react.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(6) {
+    position: absolute;
+    transform: translateX(-150%) translateY(150%);
+    background: url(../../assets/redux.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(7) {
+    position: absolute;
+    transform: translateX(-210%);
+    background: url(../../assets/node.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .home-container .logo .hover-show.active .circle:nth-child(8) {
+    position: absolute;
+    transform: translateX(-150%) translateY(-150%);
+    background: url(../../assets/mongo.png);
+    background-size: 110%;
+    background-position: center;
+  }
+  
+  @keyframes fade-in {
+    to {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 820px) {
+    .home-container {
+      padding: 150px 40px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+  
+    .home-container .logo {
+      margin-top: 120px;
+      height: 220px;
+      width: 220px;
+    }
+  
+    .home-container .logo .hover-show {
+      height: 220px;
+      width: 220px;
+    }
+  
+    .home-container .logo .circle {
+      height: 80px;
+      width: 80px;
+    }
+  
+  }
+  
+  @media (max-width: 500px) {
+    .home-container {
+      padding: 150px 30px;
+    }
+  
+  
+    .home-container .logo .circle {
+      height: 75px;
+      width: 75px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .home-container {
+      padding: 150px 10px 0;
+    }
+  
+    .home-container .logo {
+      height: 180px;
+      width: 180px;
+    }
+  
+    .home-container .logo .hover-show {
+      height: 180px;
+      width: 180px;
+    }
+  
+    .home-container .logo .circle {
+      height: 65px;
+      width: 65px;
+    }
+  
+  }

@@ -1,31 +1,60 @@
 //React
-import React from 'react';
+import React from "react";
+
+//Styles
+import { Container } from "./GlobalStyles";
+import { colors } from "./styles/colors";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+
+import { useTheme } from "./context/context";
+import { ThemeProvider } from "./context/context";
 
 //Components
-import Header from './components/header/header';
-import Navbar from './components/nav/nav';
-import Home from './components/home/home';
-import Cards from './components/cards/cards';
-import About from './components/about/about';
-import Contact from './components/contact/contact';
-import Footer from './components/footer/footer';
+import BackgroundCircle from "./components/BackgroundCircle/backgroundCircle";
+
+//styles
+import { GlobalStyle } from "./GlobalStyles";
+
+//Sections
+import Header from "./sections/header/header";
+import Navbar from "./components/Navbar/nav";
+import Home from "./sections/home/home";
+import Experience from "./sections/experience/experience";
+import Techs from "./sections/techs/techs";
+import About from "./sections/about/about";
+import Contact from "./sections/contact/contact";
+import Footer from "./sections/footer/footer";
 
 const Main: React.FC = (): JSX.Element => {
+  const { theme } = useTheme();
+
   return (
-    <>
-      <div className="bg-circle1"></div>
-      <div className="bg-circle2"></div>
-      <Header />
-      <Navbar />
-      <Home />
-      <Cards />
-      <About />
-      <Contact />
-      <Footer />
-    </>
+    <StyledThemeProvider theme={theme}>
+      <GlobalStyle theme={theme} />
+      <Container>
+        <BackgroundCircle top="0px" left="0px" color={colors.secondaryLight} />
+        <BackgroundCircle
+          bottom="100px"
+          right="250px"
+          color={colors.secondaryLight}
+        />
+        <Header />
+        <Navbar />
+        <Home />
+        <Experience />
+        <Techs />
+        <About />
+        <Contact />
+        <Footer />
+      </Container>
+    </StyledThemeProvider>
   );
 };
 
-export const App: React.FC = (): JSX.Element => {
-  return <Main />;
+export const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <Main />
+    </ThemeProvider>
+  );
 };

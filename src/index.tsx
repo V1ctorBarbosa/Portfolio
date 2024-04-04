@@ -1,17 +1,23 @@
+//React
+import React from 'react';
 import ReactDOM from 'react-dom';
+
+//App
 import { App } from './App';
 
 ReactDOM.render(
-  <App />,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
+
 const toggle = document.querySelector('.hover-show');
 
-if (toggle) {
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-  });
-}
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+});
+
 let Icons = document.querySelectorAll('.navigation .icon');
 
 Icons.forEach((icon) => {
