@@ -1,16 +1,40 @@
-import "./button.css";
+//Assets
 import curr from "../../assets/curriculoVictorBarbosa.pdf";
 
+//Styles
+import {
+  Container,
+  Blob,
+  BlobsWrapper,
+  ButtonWrapper,
+  InnerWrapper,
+} from "./button.styles";
+
 function Buttons() {
+  const numOfBlobs = 4;
   return (
-    <div className="container button-container">
-      <a href={curr} download="curriculoVictorBarbosa" className="btn pri">
+    <Container className="button-container">
+      <ButtonWrapper>
         Download CV.
-      </a>
-      <a href="#contact" className="btn sec">
-        Fale comigo!
-      </a>
-    </div>
+        <InnerWrapper>
+          <BlobsWrapper>
+            {[...Array(numOfBlobs)].map((_, index) => (
+              <Blob key={index} />
+            ))}
+          </BlobsWrapper>
+        </InnerWrapper>
+      </ButtonWrapper>
+      <ButtonWrapper href="#contact">
+        Fale Comigo!
+        <InnerWrapper>
+          <BlobsWrapper>
+            {[...Array(numOfBlobs)].map((_, index) => (
+              <Blob key={index} />
+            ))}
+          </BlobsWrapper>
+        </InnerWrapper>
+      </ButtonWrapper>
+    </Container>
   );
 }
 
