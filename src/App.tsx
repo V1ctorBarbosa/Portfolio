@@ -46,7 +46,7 @@ const Main: React.FC = (): JSX.Element => {
         <Home />
         <Experience theme={theme} />
         <Techs theme={theme} />
-        <About />
+        <About theme={theme}/>
         <Contact theme={theme} />
         <Footer />
       </Container>

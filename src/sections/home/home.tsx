@@ -53,9 +53,6 @@ function Home() {
         </div>
 
         <Image src={me} alt="" />
-        <HiddenSection>
-          <Text type="p" weight="thin">click!</Text>
-        </HiddenSection>
       </div>
 
       <Section>

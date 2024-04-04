@@ -21,12 +21,12 @@ const hoverAnimation: MotionProps = {
 };
 
 const selectedColor = (theme: IThemes) => {
-  if (theme.id == "light") return "#F16D82";
+  if (theme.theme.theme.id == "light") return "#F16D82";
   else return "#1E1E1E";
 };
 
 export const renderProjects = (theme: IThemes) =>
-  projectsData.map((project: IProjects) => (
+  projectsData(selectedColor(theme)).map((project: IProjects) => (
     <ProjectSection
       key={project.appLink}
       href={project.appLink}

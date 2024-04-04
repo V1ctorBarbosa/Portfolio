@@ -10,9 +10,9 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation } from "../../styles/types";
+import { IOnViewAnimation, IThemes } from "../../styles/types";
 
-function About() {
+function About(theme: IThemes) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -30,7 +30,7 @@ function About() {
       id='projects'
       variants={animationVariants as any}
     >
-      <Projects />
+      <Projects theme={theme} />
     </Container>
   );
 }
