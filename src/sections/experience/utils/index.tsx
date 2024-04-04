@@ -13,12 +13,15 @@ import { IThemes } from "../../../styles/types";
 //Context
 import { useTheme } from "../../../context/context";
 
-const hoverAnimation: MotionProps = {
-  whileHover: {
-    scale: 1.05,
-    transition: { duration: 0.4 },
-    backgroundColor: colors.darkShade,
-  },
+const hoverAnimation = (theme: IThemes): MotionProps => {
+  const shadow = theme.theme.id == 'dark' ? colors.whiteShade : colors.darkShade
+  return {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.4 },
+      backgroundColor: shadow
+    },
+  }
 };
 
 const selectedColor = (theme: IThemes) => {
@@ -30,7 +33,7 @@ export const handleExperiences = (experiences: IDataExperience[]) => {
   const theme = useTheme();
 
   return experiences.map((experience: IDataExperience) => (
-    <CardContainer key={experience.assignments} {...hoverAnimation}>
+    <CardContainer key={experience.assignments} {...hoverAnimation(theme)}>
       <Section>
         <Text type="h3" color={selectedColor(theme)}>
           {experience.companyName}

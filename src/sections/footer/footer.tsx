@@ -16,7 +16,12 @@ import { handleSocialMidia, hoverAnimation } from "./utils";
 //Data
 import { socialMidiaData } from "./data/data";
 
+//Context
+import { useTheme } from "../../context/context";
+
 function Footer() {
+
+  const theme = useTheme()
 
   return (
     <Container>
@@ -24,7 +29,7 @@ function Footer() {
         <Text type="h4" weight="thin" align="center">
           Obrigado por estar aqui ^^
         </Text>
-        <ScrollUp href="#home" {...hoverAnimation}>
+        <ScrollUp href="#home" {...hoverAnimation(theme)}>
           <Mouse size={40}/> <Text type="c2" weight="thin">- subir -</Text>
         </ScrollUp>
       </Header>

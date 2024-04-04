@@ -17,10 +17,10 @@ import { GlobalStyle } from "./GlobalStyles";
 
 //Sections
 import Header from "./sections/header/header";
-import Navbar from "./sections/nav/nav";
+import Navbar from "./components/Navbar/nav";
 import Home from "./sections/home/home";
 import Experience from "./sections/experience/experience";
-import Techs from "./sections/cards/techs";
+import Techs from "./sections/techs/techs";
 import About from "./sections/about/about";
 import Contact from "./sections/contact/contact";
 import Footer from "./sections/footer/footer";
