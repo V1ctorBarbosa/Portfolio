@@ -10,7 +10,6 @@
         "allowJs": true,
         "jsx": "react-jsx",
         "moduleResolution": "node",
-        "rootDir": "src",
         "forceConsistentCasingInFileNames": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
@@ -19,12 +18,15 @@
         "isolatedModules": true,
         "strictNullChecks": true,
         "allowSyntheticDefaultImports": true,
-        //"suppressImplicitAnyIndexErrors": true,
         "noUnusedLocals": true,
         "paths": {
-            "@/*": ["./src/*"],
+            "@/*": ["src/*"]
         }
     },
+    "include": [
+        "src/**/*",
+        "vite.config.ts"
+    ],
     "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"],
     "extends": "./tsconfig.paths.json"
 }

@@ -14,9 +14,11 @@ ReactDOM.render(
 
 const toggle = document.querySelector('.hover-show');
 
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('active');
-});
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+  });
+}
 
 let Icons = document.querySelectorAll('.navigation .icon');
 

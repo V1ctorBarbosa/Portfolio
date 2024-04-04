@@ -52,8 +52,10 @@ const Main: React.FC = (): JSX.Element => {
 };
 
 export const App: React.FC = () => {
+  const { theme } = useTheme();
+
   return (
-    <ThemeProvider>
+    <ThemeProvider { ...theme }>
       <Main />
     </ThemeProvider>
   );

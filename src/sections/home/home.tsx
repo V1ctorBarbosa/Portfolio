@@ -6,7 +6,7 @@ import Text from "../../components/Text/text";
 import Buttons from "../button/button";
 
 //Styles
-import { Section, Image, HiddenSection } from "./home.styles";
+import { Section, Image } from "./home.styles";
 import "./home.css";
 
 //Assets

@@ -5,12 +5,12 @@ import { SocialMidiaIcon } from "../footer.styled";
 //Types
 import { ISocialMidiaData } from "../footer.types";
 import { MotionProps } from "framer-motion";
-import { IThemes } from "../../../styles/types";
+import { IThemess } from "../../../styles/types";
 
 //Context
 import { useTheme } from "../../../context/context";
 
-export const hoverAnimation = (theme: IThemes): MotionProps => {
+export const hoverAnimation = (theme: IThemess): MotionProps => {
   const shadow = theme.theme.id == "dark" ? colors.whiteShade : colors.darkShade;
   return {
     whileHover: {

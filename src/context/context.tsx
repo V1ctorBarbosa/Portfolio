@@ -4,7 +4,7 @@ import { IThemes } from "@/styles/types";
 
 export const ThemeContext = createContext<IThemes | undefined | any>(lightTheme);
 
-export const ThemeProvider: React.FC = ({ children }) => {
+export const ThemeProvider: React.FC = ({ children }: any) => {
   const [theme, setTheme] = useState(lightTheme);
 
   const toggleTheme = () => {

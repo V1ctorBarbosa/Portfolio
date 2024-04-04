@@ -17,6 +17,5 @@ export default defineConfig({
             },
         }),
     ],
-    base: "/Portfolio"
 });
 //# sourceMappingURL=vite.config.js.map

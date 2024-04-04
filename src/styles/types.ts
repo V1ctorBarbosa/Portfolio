@@ -9,6 +9,10 @@ export interface IThemes {
   whiteShade: string;
 }
 
+export interface IThemess {
+  theme: IThemes
+}
+
 export interface IFontStyle {
   fontWeight?: string;
   fontSize?: string;

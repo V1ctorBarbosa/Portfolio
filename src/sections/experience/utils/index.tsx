@@ -8,12 +8,12 @@ import Text from "../../../components/Text/text";
 //Types
 import { IDataExperience } from "../experience.types";
 import { MotionProps } from "framer-motion";
-import { IThemes } from "../../../styles/types";
+import { IThemes, IThemess } from "../../../styles/types";
 
 //Context
 import { useTheme } from "../../../context/context";
 
-const hoverAnimation = (theme: IThemes): MotionProps => {
+const hoverAnimation = (theme: IThemess): MotionProps => {
   const shadow = theme.theme.id == 'dark' ? colors.whiteShade : colors.darkShade
   return {
     whileHover: {
