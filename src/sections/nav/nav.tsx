@@ -7,16 +7,12 @@ import { handleIcons, handleNightIcon } from "./utils";
 //Date
 import { navData } from "./data/data";
 
-
-//Types
-import { INavBar } from "./nav.types";
-
-function Navbar({ theme, handleTheme }: INavBar) {
+function Navbar() {
 
   return (
     <Container>
       {handleIcons(navData)}
-      {handleNightIcon({ theme, handleTheme })}
+      {handleNightIcon()}
     </Container>
   );
 }

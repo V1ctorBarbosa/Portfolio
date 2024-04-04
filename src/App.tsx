@@ -1,11 +1,13 @@
 //React
-import React, { useState } from "react";
+import React from "react";
 
 //Styles
 import { Container } from "./GlobalStyles";
 import { colors } from "./styles/colors";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./styles/themes";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+
+import { useTheme } from "./context/context";
+import { ThemeProvider } from "./context/context";
 
 //Components
 import BackgroundCircle from "./components/BackgroundCircle/backgroundCircle";
@@ -24,15 +26,10 @@ import Contact from "./sections/contact/contact";
 import Footer from "./sections/footer/footer";
 
 const Main: React.FC = (): JSX.Element => {
-  const [theme, setTheme] = useState(lightTheme);
-
-  const handleTheme = () => {
-    if (theme == lightTheme) setTheme(darkTheme);
-    else setTheme(lightTheme);
-  };
+  const { theme } = useTheme();
 
   return (
-    <ThemeProvider theme={theme}>
+    <StyledThemeProvider theme={theme}>
       <GlobalStyle theme={theme} />
       <Container>
         <BackgroundCircle top="0px" left="0px" color={colors.secondaryLight} />
@@ -42,18 +39,22 @@ const Main: React.FC = (): JSX.Element => {
           color={colors.secondaryLight}
         />
         <Header />
-        <Navbar theme={theme} handleTheme={handleTheme} />
+        <Navbar />
         <Home />
-        <Experience theme={theme} />
-        <Techs theme={theme} />
-        <About theme={theme}/>
-        <Contact theme={theme} />
+        <Experience />
+        <Techs />
+        <About />
+        <Contact />
         <Footer />
       </Container>
-    </ThemeProvider>
+    </StyledThemeProvider>
   );
 };
 
 export const App: React.FC = () => {
-  return <Main />;
+  return (
+    <ThemeProvider>
+      <Main />
+    </ThemeProvider>
+  );
 };

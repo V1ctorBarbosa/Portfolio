@@ -19,9 +19,13 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation, IThemes } from "../../styles/types";
+import { IOnViewAnimation } from "../../styles/types";
 
-function Experience(theme: IThemes) {
+//Context
+import { useTheme } from "../../context/context";
+
+function Experience() {
+  const theme = useTheme()
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -50,7 +54,7 @@ function Experience(theme: IThemes) {
       >
         Experiência
       </Text>
-      {handleExperiences(dataExperience, theme)}
+      {handleExperiences(dataExperience)}
     </Container>
   );
 }

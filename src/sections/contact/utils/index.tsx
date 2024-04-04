@@ -10,6 +10,9 @@ import { IContacsData } from "../contact.types";
 import { MotionProps } from "framer-motion";
 import { IThemes } from "../../../styles/types";
 
+//Context
+import { useTheme } from "../../../context/context";
+
 const hoverAnimation: MotionProps = {
     whileHover: {
       scale: 1.05,
@@ -19,12 +22,14 @@ const hoverAnimation: MotionProps = {
   };
 
   const selectedColor = (theme: IThemes) => {
-    if (theme.theme.id == "light") return "#FBDFDB";
+    if (theme.id == "light") return "#FBDFDB";
     else return "#EBEBEB";
   };
 
-export const handleContacts = (contacts: IContacsData[], theme: IThemes) =>
-    contacts.map((contact: IContacsData) => (
+  export const handleContacts = (contacts: IContacsData[]) => {
+    const theme = useTheme();
+
+    return contacts.map((contact: IContacsData) => (
       <ContactCard key={contact.name} href={contact.link} target={"blank"} {...hoverAnimation}>
         {contact.icon}
         <Text type="h4" weight="thin">
@@ -35,3 +40,4 @@ export const handleContacts = (contacts: IContacsData[], theme: IThemes) =>
         </Text>
       </ContactCard>
     ));
+};

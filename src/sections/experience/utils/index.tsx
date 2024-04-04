@@ -10,6 +10,9 @@ import { IDataExperience } from "../experience.types";
 import { MotionProps } from "framer-motion";
 import { IThemes } from "../../../styles/types";
 
+//Context
+import { useTheme } from "../../../context/context";
+
 const hoverAnimation: MotionProps = {
   whileHover: {
     scale: 1.05,
@@ -19,15 +22,14 @@ const hoverAnimation: MotionProps = {
 };
 
 const selectedColor = (theme: IThemes) => {
-  if (theme.theme.id == "light") return "#FBDFDB";
+  if (theme.id == "light") return "#FBDFDB";
   else return "#EBEBEB";
 };
 
-export const handleExperiences = (
-  experiences: IDataExperience[],
-  theme: IThemes
-) =>
-  experiences.map((experience: IDataExperience) => (
+export const handleExperiences = (experiences: IDataExperience[]) => {
+  const theme = useTheme();
+
+  return experiences.map((experience: IDataExperience) => (
     <CardContainer key={experience.assignments} {...hoverAnimation}>
       <Section>
         <Text type="h3" color={selectedColor(theme)}>
@@ -45,3 +47,4 @@ export const handleExperiences = (
       </Section>
     </CardContainer>
   ));
+};

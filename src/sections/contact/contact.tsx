@@ -19,9 +19,14 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation, IThemes } from "../../styles/types";
+import { IOnViewAnimation } from "../../styles/types";
 
-function Contact(theme: IThemes) {
+//Context
+import { useTheme } from "../../context/context";
+
+function Contact() {
+
+  const { theme } = useTheme();
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -51,7 +56,7 @@ function Contact(theme: IThemes) {
       >
         Fale Comigo!
       </Text>
-      <ContactsSection>{handleContacts(contactsData, theme)}</ContactsSection>
+      <ContactsSection>{handleContacts(contactsData)}</ContactsSection>
     </Container>
   );
 }

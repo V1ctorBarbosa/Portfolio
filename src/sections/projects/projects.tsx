@@ -7,10 +7,11 @@ import Text from "../../components/Text/text";
 //Utils
 import { renderProjects } from "./utils";
 
-//Types
-import { IThemes } from "../../styles/types";
+//Context
+import { useTheme } from "../../context/context";
 
-const Projects = (theme: IThemes) => {
+const Projects = () => {
+  const theme = useTheme();
   return (
     <Container>
       <Header>
@@ -24,7 +25,7 @@ const Projects = (theme: IThemes) => {
           Projetos
         </Text>
       </Header>
-      {renderProjects(theme)}
+      {renderProjects()}
     </Container>
   );
 };

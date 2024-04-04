@@ -8,14 +8,13 @@ import Text from "../../components/Text/text";
 import { handleCards } from "./utils";
 
 //Styles
-import {
-  Container,
-  Header,
-  CardContainer
-} from "./techs.styles";
+import { Container, Header, CardContainer } from "./techs.styles";
 
 //Data
 import { cardsData } from "./data/data";
+
+//Context
+import { useTheme } from "../../context/context";
 
 //Animation
 import { useAnimation } from "framer-motion";
@@ -23,27 +22,28 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation, IThemes } from "../../styles/types";
+import { IOnViewAnimation } from "../../styles/types";
 
-const Techs = (theme: IThemes) => {
+const Techs = () => {
+  const { theme } = useTheme();
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
   const animationVariants: IOnViewAnimation = onViewAnimation("-5%");
 
-    useEffect(() => {
-      if (inView) {
-        controls.start("visible");
-      }
-    }, [inView])
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [inView]);
 
   return (
     <Container
       ref={ref}
       animate={controls}
       initial="hidden"
-      id='techs'
+      id="techs"
       variants={animationVariants as any}
     >
       <Header>
@@ -52,7 +52,7 @@ const Techs = (theme: IThemes) => {
           weight="thin"
           align="center"
           decoration="underline"
-          color={theme.id == 'light' ? '#FBDFDB' : '#EBEBEB'}
+          color={theme.id == "light" ? "#FBDFDB" : "#EBEBEB"}
         >
           Tecnologias
         </Text>
