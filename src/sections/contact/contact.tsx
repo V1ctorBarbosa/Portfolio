@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 
 //Styles
-import { colors } from "../../styles/colors";
 import { Container, ContactsSection } from "./contact.styles";
 
 //Data
@@ -20,9 +19,9 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation } from "../../styles/types";
+import { IOnViewAnimation, IThemes } from "../../styles/types";
 
-function Contact() {
+function Contact(theme: IThemes) {
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -48,7 +47,7 @@ function Contact() {
         weight="thin"
         align="center"
         decoration="underline"
-        color={colors.secondary}
+        color={theme.id == 'light' ? '#FBDFDB' : '#EBEBEB'}
       >
         Fale Comigo!
       </Text>

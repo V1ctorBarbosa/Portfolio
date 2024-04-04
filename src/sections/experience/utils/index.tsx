@@ -8,6 +8,7 @@ import Text from "../../../components/Text/text";
 //Types
 import { IDataExperience } from "../experience.types";
 import { MotionProps } from "framer-motion";
+import { IThemes } from "../../../styles/types";
 
 const hoverAnimation: MotionProps = {
   whileHover: {
@@ -17,20 +18,30 @@ const hoverAnimation: MotionProps = {
   },
 };
 
-export const handleExperiences = (experiences: IDataExperience[]) =>
-experiences.map((experience: IDataExperience) => (
-  <CardContainer key={experience.assignments} {...hoverAnimation}>
-    <Section>
-      <Text type="h3">{experience.companyName}</Text>
-      <Text type="h4" weight="thin">
-        {experience.ocupation}
-      </Text>
-      <Text type="c1" weight="thin">
-        {experience.timePeriod}
-      </Text>
-    </Section>
-    <Section>
-      <Text type="p">{experience.assignments}</Text>
-    </Section>
-  </CardContainer>
-));
+const selectedColor = (theme: IThemes) => {
+  if (theme.theme.id == "light") return "#FBDFDB";
+  else return "#EBEBEB";
+};
+
+export const handleExperiences = (
+  experiences: IDataExperience[],
+  theme: IThemes
+) =>
+  experiences.map((experience: IDataExperience) => (
+    <CardContainer key={experience.assignments} {...hoverAnimation}>
+      <Section>
+        <Text type="h3" color={selectedColor(theme)}>
+          {experience.companyName}
+        </Text>
+        <Text type="h4" weight="thin" color={selectedColor(theme)}>
+          {experience.ocupation}
+        </Text>
+        <Text type="c1" weight="thin" color={selectedColor(theme)}>
+          {experience.timePeriod}
+        </Text>
+      </Section>
+      <Section>
+        <Text type="p">{experience.assignments}</Text>
+      </Section>
+    </CardContainer>
+  ));

@@ -1,15 +1,12 @@
 import { createGlobalStyle, styled } from 'styled-components';
 
-//Styles
-import { colors } from './styles/colors';
-
 export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: ${colors.secondary};
+  color: ${props => props.theme.secondary};
   z-index: 1;
 }
 

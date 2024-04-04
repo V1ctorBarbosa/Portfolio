@@ -33,7 +33,7 @@ const Main: React.FC = (): JSX.Element => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle theme={theme}/>
+      <GlobalStyle theme={theme} />
       <Container>
         <BackgroundCircle top="0px" left="0px" color={colors.secondaryLight} />
         <BackgroundCircle
@@ -44,10 +44,10 @@ const Main: React.FC = (): JSX.Element => {
         <Header />
         <Navbar theme={theme} handleTheme={handleTheme} />
         <Home />
-        <Experience />
-        <Techs />
+        <Experience theme={theme} />
+        <Techs theme={theme} />
         <About />
-        <Contact />
+        <Contact theme={theme} />
         <Footer />
       </Container>
     </ThemeProvider>

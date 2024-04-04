@@ -1,4 +1,5 @@
-export interface IColors {
+export interface IThemes {
+  id?: string;
   main: string;
   primary: string;
   primaryLight: string;

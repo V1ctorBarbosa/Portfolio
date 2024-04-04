@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-//Styles
-import { colors } from "../../styles/colors";
-
 //Animation
 import { motion } from "framer-motion";
 
@@ -25,7 +22,7 @@ export const ProjectSection = styled(motion.a)`
 
   border-radius: 20px;
   padding: 20px;
-  background-color: ${colors.secondary};
+  background-color: ${props => props.theme.secondary};
 
   cursor: pointer;
 

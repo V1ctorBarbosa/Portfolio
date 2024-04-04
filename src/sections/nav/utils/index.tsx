@@ -5,7 +5,7 @@ import { Link, NightMode } from "../nav.styles";
 import { Sun, Moon } from "lucide-react";
 
 //Types
-import { INavData, INightIcon } from "../nav.types";
+import { INavData } from "../nav.types";
 
 export const handleNightIcon = ({theme, handleTheme}: any) => {
   if (theme.id == 'dark')

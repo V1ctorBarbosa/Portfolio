@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 //Styles
 import { Container } from "./experience.styles";
-import { colors } from "../../styles/colors";
 
 //Data
 import { dataExperience } from "./data/data";
@@ -20,9 +19,9 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation } from "../../styles/types";
+import { IOnViewAnimation, IThemes } from "../../styles/types";
 
-function Experience() {
+function Experience(theme: IThemes) {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -47,11 +46,11 @@ function Experience() {
         weight="thin"
         align="center"
         decoration="underline"
-        color={colors.secondary}
+        color={theme.id == 'light' ? '#FBDFDB' : '#EBEBEB'}
       >
         Experiência
       </Text>
-      {handleExperiences(dataExperience)}
+      {handleExperiences(dataExperience, theme)}
     </Container>
   );
 }

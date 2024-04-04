@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-//Styles
-import { colors } from "../../styles/colors";
-
 //Animation
 import { motion } from 'framer-motion'
 
@@ -18,7 +15,7 @@ export const Container = styled.div`
   left: 3%;
   transform: translate(-50%, 70%);
 
-  background-color: ${colors.secondary};
+  background-color: ${props => props.theme.secondary};
   padding: 15px 10px;
   border-radius: 50px;
 
@@ -46,7 +43,7 @@ export const Link = styled(motion.a)`
 
   padding: 5px;
   border-radius: 50%;
-  background-color: ${colors.primaryLight};
+  background-color: ${props => props.theme.primaryLight};
 `;
 
 export const NightMode = styled.div`
@@ -57,5 +54,5 @@ export const NightMode = styled.div`
   padding: 5px;
 
   border-radius: 50%;
-  background-color: ${colors.primaryLight};
+  background-color: ${props => props.theme.id == 'light' ? '#191410' : '#F16D82' };
 `;

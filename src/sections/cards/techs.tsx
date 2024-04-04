@@ -13,7 +13,6 @@ import {
   Header,
   CardContainer
 } from "./techs.styles";
-import { colors } from "../../styles/colors";
 
 //Data
 import { cardsData } from "./data/data";
@@ -24,9 +23,9 @@ import { useInView } from "react-intersection-observer";
 import { onViewAnimation } from "../../styles/animation";
 
 //Types
-import { IOnViewAnimation } from "../../styles/types";
+import { IOnViewAnimation, IThemes } from "../../styles/types";
 
-const Techs = () => {
+const Techs = (theme: IThemes) => {
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -53,7 +52,7 @@ const Techs = () => {
           weight="thin"
           align="center"
           decoration="underline"
-          color={colors.secondary}
+          color={theme.id == 'light' ? '#FBDFDB' : '#EBEBEB'}
         >
           Tecnologias
         </Text>

@@ -3,8 +3,3 @@ export interface INavData {
     icon: JSX.Element;
     secondaryIcon?: JSX.Element;
 }
-
-export interface INightIcon {
-    nightMode: boolean;
-    handleNightMode: () => void;
-}
