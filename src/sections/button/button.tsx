@@ -14,7 +14,7 @@ function Buttons() {
   const numOfBlobs = 4;
   return (
     <Container className="button-container">
-      <ButtonWrapper>
+      <ButtonWrapper href={curr} download="curriculoVictorBarbosa">
         Download CV.
         <InnerWrapper>
           <BlobsWrapper>
