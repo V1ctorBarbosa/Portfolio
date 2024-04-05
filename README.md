@@ -10,9 +10,6 @@ My personal portfolio made with React
 * CSS3
 * Typescript
 * React
-* Styled-components
-* Framer-motion
-* Vite
 
 ### 📋 Prerequisites
 
