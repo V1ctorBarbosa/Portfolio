@@ -1,7 +1,7 @@
 # Portfolio
 My personal portfolio made with React
 
-![screencapture-localhost-5173-2024-04-04-10_27_36](https://github.com/V1ctorBarbosa/Portfolio/assets/101783823/d492975d-6f26-43b9-b8a3-e366ab6def3b)
+![screencapture-v1ctorbarbosa-github-io-Portfolio-2022-06-20-23_44_53](https://user-images.githubusercontent.com/101783823/174705358-72343e45-1003-4c8b-abd0-0e1bfe3fecc3.png)
 
 
 ## 🛠️ Built with
