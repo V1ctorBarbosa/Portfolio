@@ -8,7 +8,7 @@ My personal portfolio made with React
 
 * HTML5
 * CSS3
-* Typescript
+* Javascript
 * React
 
 ### 📋 Prerequisites
